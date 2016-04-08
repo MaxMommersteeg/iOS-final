@@ -27,14 +27,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     
-    var person: Person! {
+    var person: Person? {
         didSet (newPerson) {
+            print("New Person: \(newPerson)")
             self.refreshUI()
         }
     }
     
     func refreshUI() {
-        nameLabel?.text = person.getFullName()
+        if let p = person {
+            nameLabel?.text = p.getFullName()
+        }
+        //nameLabel?.text = person.getFullName()
         //latitudeLabel?.text = "\(person.currentLocation.latitude)"
         //longitudeLabel?.text = "\(person.currentLocation.longitude)"
     }

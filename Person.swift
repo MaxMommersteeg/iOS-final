@@ -24,6 +24,7 @@ class Person {
     
     init(jsonData: AnyObject) {
         let json = JSON(jsonData)
+        
         self.personId = json["personId"].int!
         self.firstName = json["firstName"].string!
         self.middleName = json["middleName"].string!

@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="497" y="184"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Global Split View Controller-->
         <scene sceneID="Uct-KY-w0R">
             <objects>
-                <splitViewController id="Y3Q-nQ-jAz" sceneMemberID="viewController">
+                <splitViewController id="Y3Q-nQ-jAz" customClass="GlobalSplitViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="GAt-I0-ITh" kind="relationship" relationship="masterViewController" id="6RI-Yy-SMt"/>
                         <segue destination="BNO-TE-bo8" kind="relationship" relationship="detailViewController" id="dG0-7y-UNP"/>

@@ -12,6 +12,8 @@
 		2F79419C1CB83532007605E7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79419B1CB83532007605E7 /* Person.swift */; };
 		2F79419E1CB8353C007605E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79419D1CB8353C007605E7 /* Location.swift */; };
 		2F7941A01CB835AF007605E7 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F79419F1CB835AF007605E7 /* persons.json */; };
+		2F8D80991CB848EC00EDCAF1 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D80981CB848EC00EDCAF1 /* RestClient.swift */; };
+		2F8D809B1CB8502800EDCAF1 /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */; };
 		7829B5D51AF8366B00770230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5D41AF8366B00770230 /* AppDelegate.swift */; };
 		7829B5D71AF8366B00770230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5D61AF8366B00770230 /* ViewController.swift */; };
 		7829B5DA1AF8366B00770230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7829B5D81AF8366B00770230 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		2F79419B1CB83532007605E7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2F79419D1CB8353C007605E7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2F79419F1CB835AF007605E7 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
+		2F8D80981CB848EC00EDCAF1 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
 		7829B5CF1AF8366B00770230 /* iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7829B5D31AF8366B00770230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7829B5D41AF8366B00770230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				2F79419F1CB835AF007605E7 /* persons.json */,
+				2F8D80981CB848EC00EDCAF1 /* RestClient.swift */,
 			);
 			name = Api;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 				7829B5DB1AF8366B00770230 /* Images.xcassets */,
 				7829B5DD1AF8366B00770230 /* LaunchScreen.xib */,
 				7829B5D21AF8366B00770230 /* Supporting Files */,
+				2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */,
 			);
 			name = "iOS-Final";
 			path = MathMonsters;
@@ -195,7 +201,9 @@
 				2F7941981CB834C6007605E7 /* NSDateExtensions.swift in Sources */,
 				7829B5D51AF8366B00770230 /* AppDelegate.swift in Sources */,
 				2F79419E1CB8353C007605E7 /* Location.swift in Sources */,
+				2F8D80991CB848EC00EDCAF1 /* RestClient.swift in Sources */,
 				7829B5F51AF83B2A00770230 /* MasterViewController.swift in Sources */,
+				2F8D809B1CB8502800EDCAF1 /* GlobalSplitViewController.swift in Sources */,
 				2F79419A1CB834EA007605E7 /* SwiftyJSON.swift in Sources */,
 				2F79419C1CB83532007605E7 /* Person.swift in Sources */,
 				7829B5F71AF84B1800770230 /* DetailViewController.swift in Sources */,

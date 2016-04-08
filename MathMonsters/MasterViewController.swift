@@ -11,33 +11,30 @@ class MasterViewController: UITableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        self.persons.append(Person(personId:0, firstName:"Max", middleName:"", lastName:"Mommersteeg",
-            birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
-        
-        self.persons.append(Person(personId:0, firstName:"Anouk", middleName:"", lastName:"Mommersteeg",
-            birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
-        
-        self.persons.append(Person(personId:0, firstName:"Tim", middleName:"", lastName:"Mommersteeg",
-            birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
-        
-        let url = NSBundle.mainBundle().URLForResource("persons", withExtension: "json")
-        let data = NSData(contentsOfURL: url!)
-        
-        do {
-            let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-            if let dictionary = object as? [String: AnyObject] {
-                readJSONObject(dictionary)
+        let rc = RestClient()
+        print("Instantiated RestClient")
+        rc.getPersons({(data, error) in
+            if(error != nil) {
+                // Error
+                print(error)
+                return
             }
-        } catch {
-            // Handle error
-        }
+            // Succeeded
+            if let dictionary = data as? [String: AnyObject] {
+                print("Reading data")
+                self.readJSONObject(dictionary)
+            }
+        })
+    }
+    
+    func getJSON(urlToRequest: String) -> NSData {
+        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
     }
     
     func readJSONObject(object: [String: AnyObject]) {
         guard let retrievedPersons = object["persons"] as? [[String: AnyObject]] else { return }
-        var personList: Array<Person> = []
         for person in retrievedPersons {
-            personList.append(Person(jsonData: person))
+            self.persons.append(Person(jsonData: person))
         }
     }
     
