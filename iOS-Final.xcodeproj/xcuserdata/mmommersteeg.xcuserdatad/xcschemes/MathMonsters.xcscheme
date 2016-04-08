@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7829B5CE1AF8366B00770230"
-               BuildableName = "iOS-final.app"
-               BlueprintName = "iOS-final"
-               ReferencedContainer = "container:iOS-final.xcodeproj">
+               BuildableName = "iOS-Final.app"
+               BlueprintName = "iOS-Final"
+               ReferencedContainer = "container:iOS-Final.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7829B5CE1AF8366B00770230"
-            BuildableName = "iOS-final.app"
-            BlueprintName = "iOS-final"
-            ReferencedContainer = "container:iOS-final.xcodeproj">
+            BuildableName = "iOS-Final.app"
+            BlueprintName = "iOS-Final"
+            ReferencedContainer = "container:iOS-Final.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7829B5CE1AF8366B00770230"
-            BuildableName = "iOS-final.app"
-            BlueprintName = "iOS-final"
-            ReferencedContainer = "container:iOS-final.xcodeproj">
+            BuildableName = "iOS-Final.app"
+            BlueprintName = "iOS-Final"
+            ReferencedContainer = "container:iOS-Final.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7829B5CE1AF8366B00770230"
-            BuildableName = "iOS-final.app"
-            BlueprintName = "iOS-final"
-            ReferencedContainer = "container:iOS-final.xcodeproj">
+            BuildableName = "iOS-Final.app"
+            BlueprintName = "iOS-Final"
+            ReferencedContainer = "container:iOS-Final.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,26 +1,26 @@
 import Foundation
 
 class Person {
-        
+    
     var personId: Int
     var firstName: String
     var middleName: String
     var lastName: String
     var birthDate: String
-    var currentLocation: AnyObject
+    //var currentLocation: AnyObject
     
-
-  // designated initializer for a Monster
+    
+    // designated initializer for a Monster
     init(personId: Int, firstName: String, middleName: String, lastName: String,
          birthDate: String, currentLocation: Location) {
         
-    self.personId = personId
-    self.firstName = firstName
-    self.middleName = middleName
-    self.lastName = lastName
-    self.birthDate = birthDate
-    self.currentLocation = currentLocation
-  }
+        self.personId = personId
+        self.firstName = firstName
+        self.middleName = middleName
+        self.lastName = lastName
+        self.birthDate = birthDate
+        //self.currentLocation = currentLocation
+    }
     
     init(jsonData: AnyObject) {
         let json = JSON(jsonData)
@@ -29,7 +29,6 @@ class Person {
         self.middleName = json["middleName"].string!
         self.lastName = json["lastName"].string!
         self.birthDate = json["birthDate"].string!
-        self.currentLocation = json["currentLocation"].arrayObject!
     }
     
     func getFullName() -> String! {

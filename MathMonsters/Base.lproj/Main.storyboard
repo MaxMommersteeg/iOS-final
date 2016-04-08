@@ -8,7 +8,7 @@
         <!--Detail View Controller-->
         <scene sceneID="2kc-8s-oIa">
             <objects>
-                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="iOS_final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="auu-wc-11u"/>
                         <viewControllerLayoutGuide type="bottom" id="IY0-bF-kzS"/>
@@ -18,24 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRW-Jc-WPe">
-                                <rect key="frame" x="20" y="85" width="560" height="36"/>
-                                <accessibility key="accessibilityConfiguration" identifier="nameLabel"/>
+                                <rect key="frame" x="20" y="72" width="560" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="personName"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-NG-XAd">
-                                <rect key="frame" x="20" y="129" width="326" height="29"/>
+                                <rect key="frame" x="20" y="116" width="560" height="29"/>
                                 <accessibility key="accessibilityConfiguration" identifier="latitudeLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viO-Gf-d2a">
-                                <rect key="frame" x="20" y="166" width="326" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-k5-43V">
+                                <rect key="frame" x="20" y="153" width="560" height="29"/>
                                 <accessibility key="accessibilityConfiguration" identifier="longitudeLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -43,8 +43,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="iQ8-BX-V99"/>
                     <connections>
-                        <outlet property="latitudeLabel" destination="eyA-NG-XAd" id="3gK-Dz-CY8"/>
-                        <outlet property="longitudeLabel" destination="viO-Gf-d2a" id="app-MB-HKg"/>
                         <outlet property="nameLabel" destination="nRW-Jc-WPe" id="xu4-jQ-TFR"/>
                     </connections>
                 </viewController>
@@ -55,7 +53,7 @@
         <!--Root View Controller-->
         <scene sceneID="j6P-X0-CI4">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="jgm-vx-OJ6" customClass="MasterViewController" customModule="iOS_final" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="jgm-vx-OJ6" customClass="MasterViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="BFa-38-msO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +70,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>

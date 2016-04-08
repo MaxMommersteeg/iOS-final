@@ -36,8 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let rightNavController = splitViewController.viewControllers.last as! UINavigationController
     let detailViewController = rightNavController.topViewController as! DetailViewController
 
-    let firstMonster = masterViewController.persons.first
-    detailViewController.person = firstMonster
+    let firstPerson = masterViewController.persons.first
+    detailViewController.person = firstPerson
 
     masterViewController.delegate = detailViewController
 

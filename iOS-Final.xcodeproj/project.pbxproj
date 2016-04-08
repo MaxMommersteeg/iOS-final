@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F90D4DB1CB7D66B0018F904 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F90D4DA1CB7D66B0018F904 /* Location.swift */; };
-		2F90D4DE1CB7E2BA0018F904 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F90D4DD1CB7E2BA0018F904 /* NSDateExtensions.swift */; };
-		2FAE181A1CB7ECFC00A77F90 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 2FAE18191CB7ECFC00A77F90 /* persons.json */; };
-		2FAE181D1CB82D8D00A77F90 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAE181C1CB82D8D00A77F90 /* SwiftyJSON.swift */; };
+		2F7941981CB834C6007605E7 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7941971CB834C6007605E7 /* NSDateExtensions.swift */; };
+		2F79419A1CB834EA007605E7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7941991CB834EA007605E7 /* SwiftyJSON.swift */; };
+		2F79419C1CB83532007605E7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79419B1CB83532007605E7 /* Person.swift */; };
+		2F79419E1CB8353C007605E7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79419D1CB8353C007605E7 /* Location.swift */; };
+		2F7941A01CB835AF007605E7 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F79419F1CB835AF007605E7 /* persons.json */; };
 		7829B5D51AF8366B00770230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5D41AF8366B00770230 /* AppDelegate.swift */; };
 		7829B5D71AF8366B00770230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5D61AF8366B00770230 /* ViewController.swift */; };
 		7829B5DA1AF8366B00770230 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7829B5D81AF8366B00770230 /* Main.storyboard */; };
@@ -18,15 +19,15 @@
 		7829B5DF1AF8366B00770230 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7829B5DD1AF8366B00770230 /* LaunchScreen.xib */; };
 		7829B5F51AF83B2A00770230 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5F41AF83B2A00770230 /* MasterViewController.swift */; };
 		7829B5F71AF84B1800770230 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5F61AF84B1800770230 /* DetailViewController.swift */; };
-		7829B5F91AF84C3400770230 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5F81AF84C3400770230 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2F90D4DA1CB7D66B0018F904 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		2F90D4DD1CB7E2BA0018F904 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
-		2FAE18191CB7ECFC00A77F90 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
-		2FAE181C1CB82D8D00A77F90 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		7829B5CF1AF8366B00770230 /* iOS-final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F7941971CB834C6007605E7 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
+		2F7941991CB834EA007605E7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		2F79419B1CB83532007605E7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		2F79419D1CB8353C007605E7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2F79419F1CB835AF007605E7 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
+		7829B5CF1AF8366B00770230 /* iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7829B5D31AF8366B00770230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7829B5D41AF8366B00770230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7829B5D61AF8366B00770230 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		7829B5DE1AF8366B00770230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7829B5F41AF83B2A00770230 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		7829B5F61AF84B1800770230 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		7829B5F81AF84C3400770230 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,43 +49,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2F90D4D91CB7D6370018F904 /* Models */ = {
+		2F7941941CB8348C007605E7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7829B5F81AF84C3400770230 /* Person.swift */,
-				2F90D4DA1CB7D66B0018F904 /* Location.swift */,
+				2F79419B1CB83532007605E7 /* Person.swift */,
+				2F79419D1CB8353C007605E7 /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
 		};
-		2F90D4DC1CB7E2730018F904 /* Extensions */ = {
+		2F7941951CB83494007605E7 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				2F90D4DD1CB7E2BA0018F904 /* NSDateExtensions.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		2FAE18181CB7ECBE00A77F90 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				2FAE18191CB7ECFC00A77F90 /* persons.json */,
-			);
-			name = Data;
-			sourceTree = "<group>";
-		};
-		2FAE181B1CB82D6100A77F90 /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				2FAE181C1CB82D8D00A77F90 /* SwiftyJSON.swift */,
+				2F79419F1CB835AF007605E7 /* persons.json */,
 			);
 			name = Api;
+			sourceTree = "<group>";
+		};
+		2F7941961CB8349D007605E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F7941971CB834C6007605E7 /* NSDateExtensions.swift */,
+				2F7941991CB834EA007605E7 /* SwiftyJSON.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		7829B5C61AF8366B00770230 = {
 			isa = PBXGroup;
 			children = (
-				7829B5D11AF8366B00770230 /* iOS-final */,
+				2F7941961CB8349D007605E7 /* Extensions */,
+				2F7941951CB83494007605E7 /* Api */,
+				2F7941941CB8348C007605E7 /* Models */,
+				7829B5D11AF8366B00770230 /* iOS-Final */,
 				7829B5D01AF8366B00770230 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,18 +89,14 @@
 		7829B5D01AF8366B00770230 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7829B5CF1AF8366B00770230 /* iOS-final.app */,
+				7829B5CF1AF8366B00770230 /* iOS-Final.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7829B5D11AF8366B00770230 /* iOS-final */ = {
+		7829B5D11AF8366B00770230 /* iOS-Final */ = {
 			isa = PBXGroup;
 			children = (
-				2FAE181B1CB82D6100A77F90 /* Api */,
-				2FAE18181CB7ECBE00A77F90 /* Data */,
-				2F90D4DC1CB7E2730018F904 /* Extensions */,
-				2F90D4D91CB7D6370018F904 /* Models */,
 				7829B5D41AF8366B00770230 /* AppDelegate.swift */,
 				7829B5D61AF8366B00770230 /* ViewController.swift */,
 				7829B5F41AF83B2A00770230 /* MasterViewController.swift */,
@@ -114,7 +106,7 @@
 				7829B5DD1AF8366B00770230 /* LaunchScreen.xib */,
 				7829B5D21AF8366B00770230 /* Supporting Files */,
 			);
-			name = "iOS-final";
+			name = "iOS-Final";
 			path = MathMonsters;
 			sourceTree = "<group>";
 		};
@@ -129,9 +121,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7829B5CE1AF8366B00770230 /* iOS-final */ = {
+		7829B5CE1AF8366B00770230 /* iOS-Final */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7829B5EE1AF8366B00770230 /* Build configuration list for PBXNativeTarget "iOS-final" */;
+			buildConfigurationList = 7829B5EE1AF8366B00770230 /* Build configuration list for PBXNativeTarget "iOS-Final" */;
 			buildPhases = (
 				7829B5CB1AF8366B00770230 /* Sources */,
 				7829B5CC1AF8366B00770230 /* Frameworks */,
@@ -141,9 +133,9 @@
 			);
 			dependencies = (
 			);
-			name = "iOS-final";
+			name = "iOS-Final";
 			productName = MathMonsters;
-			productReference = 7829B5CF1AF8366B00770230 /* iOS-final.app */;
+			productReference = 7829B5CF1AF8366B00770230 /* iOS-Final.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7829B5CA1AF8366B00770230 /* Build configuration list for PBXProject "iOS-final" */;
+			buildConfigurationList = 7829B5CA1AF8366B00770230 /* Build configuration list for PBXProject "iOS-Final" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -175,7 +167,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7829B5CE1AF8366B00770230 /* iOS-final */,
+				7829B5CE1AF8366B00770230 /* iOS-Final */,
 			);
 		};
 /* End PBXProject section */
@@ -187,7 +179,7 @@
 			files = (
 				7829B5DA1AF8366B00770230 /* Main.storyboard in Resources */,
 				7829B5DF1AF8366B00770230 /* LaunchScreen.xib in Resources */,
-				2FAE181A1CB7ECFC00A77F90 /* persons.json in Resources */,
+				2F7941A01CB835AF007605E7 /* persons.json in Resources */,
 				7829B5DC1AF8366B00770230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,13 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7829B5F91AF84C3400770230 /* Person.swift in Sources */,
-				2F90D4DE1CB7E2BA0018F904 /* NSDateExtensions.swift in Sources */,
 				7829B5D71AF8366B00770230 /* ViewController.swift in Sources */,
-				2FAE181D1CB82D8D00A77F90 /* SwiftyJSON.swift in Sources */,
+				2F7941981CB834C6007605E7 /* NSDateExtensions.swift in Sources */,
 				7829B5D51AF8366B00770230 /* AppDelegate.swift in Sources */,
+				2F79419E1CB8353C007605E7 /* Location.swift in Sources */,
 				7829B5F51AF83B2A00770230 /* MasterViewController.swift in Sources */,
-				2F90D4DB1CB7D66B0018F904 /* Location.swift in Sources */,
+				2F79419A1CB834EA007605E7 /* SwiftyJSON.swift in Sources */,
+				2F79419C1CB83532007605E7 /* Person.swift in Sources */,
 				7829B5F71AF84B1800770230 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +315,7 @@
 				INFOPLIST_FILE = MathMonsters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "iOS-final";
+				PRODUCT_NAME = "iOS-Final";
 			};
 			name = Debug;
 		};
@@ -334,14 +326,14 @@
 				INFOPLIST_FILE = MathMonsters/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "iOS-final";
+				PRODUCT_NAME = "iOS-Final";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7829B5CA1AF8366B00770230 /* Build configuration list for PBXProject "iOS-final" */ = {
+		7829B5CA1AF8366B00770230 /* Build configuration list for PBXProject "iOS-Final" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7829B5EC1AF8366B00770230 /* Debug */,
@@ -350,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7829B5EE1AF8366B00770230 /* Build configuration list for PBXNativeTarget "iOS-final" */ = {
+		7829B5EE1AF8366B00770230 /* Build configuration list for PBXNativeTarget "iOS-Final" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7829B5EF1AF8366B00770230 /* Debug */,
