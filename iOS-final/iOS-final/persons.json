@@ -1,0 +1,40 @@
+{
+    "persons": [
+                {
+                "personId": 0,
+                "firstName": "Rob",
+                "middleName": "",
+                "lastName": "Doe",
+                "birthDate": "1994-02-01",
+                "currentLocation": {
+                "latitude": 51.690686,
+                "longitude": 5.178211,
+                "city": "Nieuwkuijk"
+                }
+                },
+                {
+                "personId": 1,
+                "firstName": "Jane",
+                "middleName": "",
+                "lastName": "Doe",
+                "birthDate": "1995-08-31",
+                "currentLocation": {
+                "latitude": 51.690686,
+                "longitude": 5.178211,
+                "city": "Nieuwkuijk"
+                }
+                },
+                {
+                "personId": 2,
+                "firstName": "John",
+                "middleName": "",
+                "lastName": "Doe",
+                "birthDate": "1991-02-15",
+                "currentLocation": {
+                "latitude": 51.690686,
+                "longitude": 5.178211,
+                "city": "Nieuwkuijk"
+                }
+                }
+                ]
+}

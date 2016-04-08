@@ -22,27 +22,11 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-  @IBOutlet weak var nameLabel: UILabel!
-  @IBOutlet weak var latitudeLabel: UILabel!
-  @IBOutlet weak var longitudeLabel: UILabel!
-
-  var person: Person! {
-    didSet (newPerson) {
-      self.refreshUI()
-    }
-  }
-
-  func refreshUI() {
-    nameLabel?.text = person.getFullName()
-    latitudeLabel?.text = "\(person.currentLocation.latitude)"
-    longitudeLabel?.text = "\(person.currentLocation.longitude)"
-  }
+class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-
-    refreshUI()
+    // Do any additional setup after loading the view, typically from a nib.
   }
 
   override func didReceiveMemoryWarning() {
@@ -50,10 +34,6 @@ class DetailViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+
 }
 
-extension DetailViewController: MonsterSelectionDelegate {
-  func monsterSelected(newPerson: Person) {
-    person = newPerson
-  }
-}

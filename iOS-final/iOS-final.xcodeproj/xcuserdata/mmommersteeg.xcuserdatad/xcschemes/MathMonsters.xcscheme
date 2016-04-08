@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F90D4A21CB7CD2E0018F904"
+               BlueprintIdentifier = "7829B5CE1AF8366B00770230"
                BuildableName = "iOS-final.app"
                BlueprintName = "iOS-final"
                ReferencedContainer = "container:iOS-final.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F90D4B81CB7CD2E0018F904"
-               BuildableName = "iOS-finalTests.xctest"
-               BlueprintName = "iOS-finalTests"
-               ReferencedContainer = "container:iOS-final.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F90D4C31CB7CD2E0018F904"
-               BuildableName = "iOS-finalUITests.xctest"
-               BlueprintName = "iOS-finalUITests"
-               ReferencedContainer = "container:iOS-final.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F90D4A21CB7CD2E0018F904"
+            BlueprintIdentifier = "7829B5CE1AF8366B00770230"
             BuildableName = "iOS-final.app"
             BlueprintName = "iOS-final"
             ReferencedContainer = "container:iOS-final.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F90D4A21CB7CD2E0018F904"
+            BlueprintIdentifier = "7829B5CE1AF8366B00770230"
             BuildableName = "iOS-final.app"
             BlueprintName = "iOS-final"
             ReferencedContainer = "container:iOS-final.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F90D4A21CB7CD2E0018F904"
+            BlueprintIdentifier = "7829B5CE1AF8366B00770230"
             BuildableName = "iOS-final.app"
             BlueprintName = "iOS-final"
             ReferencedContainer = "container:iOS-final.xcodeproj">

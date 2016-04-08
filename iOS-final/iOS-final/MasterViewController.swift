@@ -1,94 +1,102 @@
-//
-//  MasterViewController.swift
-//  iOS-final
-//
-//  Created by M Mommersteeg on 08/04/16.
-//  Copyright © 2016 Max Mommersteeg. All rights reserved.
-//
-
 import UIKit
 
-class MasterViewController: UITableViewController {
-
-    var detailViewController: DetailViewController? = nil
-    var objects = [AnyObject]()
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
-        super.viewWillAppear(animated)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    func insertNewObject(sender: AnyObject) {
-        objects.insert(NSDate(), atIndex: 0)
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-    }
-
-    // MARK: - Segues
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
-    }
-
-    // MARK: - Table View
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
-        return cell
-    }
-
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            objects.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
-    }
-
-
+protocol MonsterSelectionDelegate: class {
+  func monsterSelected(newPerson: Person)
 }
 
+class MasterViewController: UITableViewController {
+  var persons = [Person]()
+  weak var delegate: MonsterSelectionDelegate?
+
+  required init(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)!
+
+    self.persons.append(Person(personId:0, firstName:"Max", middleName:"", lastName:"Mommersteeg",
+        birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
+    
+    self.persons.append(Person(personId:0, firstName:"Anouk", middleName:"", lastName:"Mommersteeg",
+        birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
+    
+    self.persons.append(Person(personId:0, firstName:"Tim", middleName:"", lastName:"Mommersteeg",
+        birthDate:"1994-02-01", currentLocation: Location(latitude: 51.690686, longitude: 5.178211, city: "Nieuwkuijk")))
+    
+    let url = NSBundle.mainBundle().URLForResource("persons", withExtension: "json")
+    let data = NSData(contentsOfURL: url!)
+    
+    do {
+        let object = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+        if let dictionary = object as? [String: AnyObject] {
+            readJSONObject(dictionary)
+        }
+    } catch {
+        // Handle error
+    }
+  }
+    
+    func readJSONObject(object: [String: AnyObject]) {
+        guard let retrievedPersons = object["persons"] as? [[String: AnyObject]] else { return }
+        var personList: Array<Person> = []
+        for person in retrievedPersons {
+            var pi: Int
+            var fn, mn, ln, bd: String
+            var l: Location
+            
+            pi = person["personId"] as! Int
+            fn = person["firstName"]! as! String
+            mn = person["middleName"] as! String
+            ln = person["lastName"] as! String
+            bd = person["birthDate"] as! String
+            
+            l = person["currentLocation"] as! Location
+            
+            print(l["latitude"])
+            
+        }
+    }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // Uncomment the following line to preserve selection between presentations
+    // self.clearsSelectionOnViewWillAppear = false
+
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+  }
+
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+
+  // MARK: - Table view data source
+
+  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    // Return the number of sections.
+    return 1
+  }
+
+  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // Return the number of rows in the section.
+    return self.persons.count
+  }
+
+  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
+
+    let person = self.persons[indexPath.row]
+    cell.textLabel?.text = person.getFullName()
+
+    return cell
+  }
+
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let selectedPerson = self.persons[indexPath.row]
+    self.delegate?.monsterSelected(selectedPerson)
+
+    if let detailViewController = self.delegate as? DetailViewController {
+      splitViewController?.showDetailViewController(detailViewController.navigationController!, sender: nil)
+    }
+  }
+
+}
