@@ -11,32 +11,25 @@ class MasterViewController: UITableViewController {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
-        let rc = RestClient()
+        var rc = RestClient()
         print("Instantiated RestClient")
         rc.getPersons({(data, error) in
+            
+            print(data)
+            
             if(error != nil) {
                 // Error
                 print(error)
                 return
             }
             // Succeeded
-            if let dictionary = data as? [String: AnyObject] {
-                print("Reading data")
-                self.readJSONObject(dictionary)
-            }
+            print("yeahs")
         })
+        
+        print("Done with callback")
     }
     
-    func getJSON(urlToRequest: String) -> NSData {
-        return NSData(contentsOfURL: NSURL(string: urlToRequest)!)!
-    }
     
-    func readJSONObject(object: [String: AnyObject]) {
-        guard let retrievedPersons = object["persons"] as? [[String: AnyObject]] else { return }
-        for person in retrievedPersons {
-            self.persons.append(Person(jsonData: person))
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
