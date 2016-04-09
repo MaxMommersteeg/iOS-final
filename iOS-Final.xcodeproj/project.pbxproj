@@ -30,7 +30,7 @@
 		2F79419B1CB83532007605E7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2F79419D1CB8353C007605E7 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2F79419F1CB835AF007605E7 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
-		2F7B202E1CB9ADFD008A6992 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2F7B202E1CB9ADFD008A6992 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		2F8D80981CB848EC00EDCAF1 /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
 		7829B5CF1AF8366B00770230 /* iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +85,6 @@
 		7829B5C61AF8366B00770230 = {
 			isa = PBXGroup;
 			children = (
-				2F7B202E1CB9ADFD008A6992 /* Constants.swift */,
 				2F7941961CB8349D007605E7 /* Extensions */,
 				2F7941951CB83494007605E7 /* Api */,
 				2F7941941CB8348C007605E7 /* Models */,
@@ -105,6 +104,7 @@
 		7829B5D11AF8366B00770230 /* iOS-Final */ = {
 			isa = PBXGroup;
 			children = (
+				2F7B202E1CB9ADFD008A6992 /* Constants.swift */,
 				7829B5D41AF8366B00770230 /* AppDelegate.swift */,
 				7829B5D61AF8366B00770230 /* ViewController.swift */,
 				7829B5F41AF83B2A00770230 /* MasterViewController.swift */,

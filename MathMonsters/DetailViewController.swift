@@ -27,15 +27,31 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var aliasTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
-    var person: Person?
+    var completeAliasPreferenceKey: String = ""
+    
+    var person: Person? {
+        didSet (newPerson) {
+            self.refreshUI()
+        }
+    }
     
     func refreshUI() {
         if let p = person {
+            completeAliasPreferenceKey = "\(Config.aliasPreferenceKey)\(p.personId)"
+            print(completeAliasPreferenceKey)
+
             nameLabel?.text = p.getFullName()
             latitudeLabel?.text = "\(p.currentLocation.latitude)"
             longitudeLabel?.text = "\(p.currentLocation.longitude)"
             cityLabel?.text = p.currentLocation.city
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            if let alias = defaults.stringForKey(completeAliasPreferenceKey) {
+                aliasTextField?.text = alias
+            }
         }
     }
     
@@ -49,6 +65,19 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButtonPressed() {
+        let alias = aliasTextField.text!
+        if alias.isEmpty  {
+            print("Failed saving Alias")
+            // refreshUI to reset Alias
+            refreshUI()
+            return
+        }
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(alias, forKey: completeAliasPreferenceKey)
+        defaults.synchronize()
+        print("Saved Alias")
+    }
 }
 
 extension DetailViewController: PersonSelectionDelegate {

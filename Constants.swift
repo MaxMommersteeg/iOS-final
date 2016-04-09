@@ -9,5 +9,5 @@
 import Foundation
 
 struct Config {
-    static let personsUpdated = "PersonsUpdated"
+    static let aliasPreferenceKey = "ALIAS_PREFERENCE_KEY"
 }
