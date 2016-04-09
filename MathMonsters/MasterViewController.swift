@@ -14,7 +14,6 @@ class MasterViewController: UITableViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,16 +27,16 @@ class MasterViewController: UITableViewController {
             let statusCode = httpResponse.statusCode
             
             if (statusCode == 200) {
-                
-                let nsjs = NSJSONSerialization.JSONObjectWithData(data!) as! NSDictionary
-                let pl = nsjs
-                
-            guard let retrievedPersons = data! as [[String: AnyObject]] else { return }
-                print(retrievedPersons)
-            for person in retrievedPersons {
-                print(person)
-                self.persons.append(Person(jsonData: person))
-            }
+                print("IM HERRE")
+                do {
+                    let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
+                    for person in data as! [Dictionary<String, AnyObject>] {
+                        self.persons.append(Person(jsonData: person))
+                    }
+                } catch {
+                    
+                }
+               
         }
             }
         task.resume()
