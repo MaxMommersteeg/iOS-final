@@ -24,16 +24,29 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-NG-XAd">
-                                <rect key="frame" x="20" y="116" width="560" height="29"/>
-                                <accessibility key="accessibilityConfiguration" identifier="latitudeLabel"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-k5-43V">
+                                <rect key="frame" x="20" y="153" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="longitudeLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-k5-43V">
-                                <rect key="frame" x="20" y="153" width="560" height="29"/>
-                                <accessibility key="accessibilityConfiguration" identifier="longitudeLabel"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w53-Mw-5WJ">
+                                <rect key="frame" x="20" y="190" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cityLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-NG-XAd">
+                                <rect key="frame" x="20" y="116" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="latitudeLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +56,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="iQ8-BX-V99"/>
                     <connections>
+                        <outlet property="cityLabel" destination="w53-Mw-5WJ" id="QlX-AS-FDC"/>
+                        <outlet property="latitudeLabel" destination="eyA-NG-XAd" id="Q4u-1t-jxS"/>
+                        <outlet property="longitudeLabel" destination="CrG-k5-43V" id="MY7-BR-Liq"/>
                         <outlet property="nameLabel" destination="nRW-Jc-WPe" id="xu4-jQ-TFR"/>
                     </connections>
                 </viewController>
@@ -78,11 +94,14 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="jgm-vx-OJ6" id="EHF-B7-KNv"/>
-                            <outlet property="delegate" destination="jgm-vx-OJ6" id="xgi-gT-IwG"/>
+                            <outlet property="dataSource" destination="jgm-vx-OJ6" id="OD9-Rd-Chl"/>
+                            <outlet property="delegate" destination="jgm-vx-OJ6" id="8cl-CA-sSA"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="nRp-8d-MtU"/>
+                    <connections>
+                        <outlet property="personTableView" destination="BFa-38-msO" id="LhS-gr-P4N"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hu0-Pr-uzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

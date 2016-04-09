@@ -8,6 +8,8 @@ class MasterViewController: UITableViewController {
     var persons = [Person]()
     var delegate: PersonSelectionDelegate?
     
+    @IBOutlet weak var personTableView: UITableView!
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
 
@@ -26,19 +28,23 @@ class MasterViewController: UITableViewController {
             let httpResponse = response as! NSHTTPURLResponse
             let statusCode = httpResponse.statusCode
             
+            // Only check
             if (statusCode == 200) {
-                print("IM HERRE")
                 do {
                     let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                     for person in data as! [Dictionary<String, AnyObject>] {
-                        self.persons.append(Person(jsonData: person))
+                        let p = Person(jsonData: person)
+                        self.persons.append(p)
                     }
-                } catch {
-                    
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        print("Update Person Table")
+                        self.personTableView.reloadData()
+                    })
+                } catch let error as NSError {
+                    print(error)
                 }
-               
-        }
             }
+        }
         task.resume()
     }
     

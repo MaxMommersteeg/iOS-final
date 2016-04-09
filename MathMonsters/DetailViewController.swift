@@ -26,26 +26,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     
-    var person: Person? {
-        didSet (newPerson) {
-            print("New Person: \(newPerson)")
-            self.refreshUI()
-        }
-    }
+    var person: Person?
     
     func refreshUI() {
         if let p = person {
             nameLabel?.text = p.getFullName()
+            latitudeLabel?.text = "\(p.currentLocation.latitude)"
+            longitudeLabel?.text = "\(p.currentLocation.longitude)"
+            cityLabel?.text = p.currentLocation.city
         }
-        //nameLabel?.text = person.getFullName()
-        //latitudeLabel?.text = "\(person.currentLocation.latitude)"
-        //longitudeLabel?.text = "\(person.currentLocation.longitude)"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         refreshUI()
     }
     

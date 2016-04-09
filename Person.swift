@@ -7,20 +7,7 @@ class Person {
     var middleName: String
     var lastName: String
     var birthDate: String
-    //var currentLocation: AnyObject
-    
-    
-    // designated initializer for a Monster
-    init(personId: Int, firstName: String, middleName: String, lastName: String,
-         birthDate: String, currentLocation: Location) {
-        
-        self.personId = personId
-        self.firstName = firstName
-        self.middleName = middleName
-        self.lastName = lastName
-        self.birthDate = birthDate
-        //self.currentLocation = currentLocation
-    }
+    var currentLocation: Location
     
     init(jsonData: AnyObject) {
         let json = JSON(jsonData)
@@ -30,6 +17,13 @@ class Person {
         self.middleName = json["middleName"].string!
         self.lastName = json["lastName"].string!
         self.birthDate = json["birthDate"].string!
+        print(json["currentLocation"])
+        
+        let lat = json["currentLocation"]["latitude"].double!
+        let lon = json["currentLocation"]["longitude"].double!
+        let city = json["currentLocation"]["city"].string!
+        
+        self.currentLocation = Location(latitude: lat, longitude: lon, city: city)
     }
     
     func getFullName() -> String! {
