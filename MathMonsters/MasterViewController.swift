@@ -10,35 +10,37 @@ class MasterViewController: UITableViewController {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
+
         
-        var rc = RestClient()
-        print("Instantiated RestClient")
-        rc.getPersons({(data, error) in
-            
-            print(data)
-            
-            if(error != nil) {
-                // Error
-                print(error)
-                return
-            }
-            // Succeeded
-            print("yeahs")
-        })
-        
-        print("Done with callback")
     }
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let requestURL: NSURL = NSURL(string: "http://www.maxmommersteeg.nl/users.json")!
+        let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(urlRequest) {
+            (data, response, error) -> Void in
+            
+            let httpResponse = response as! NSHTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            
+            if (statusCode == 200) {
+                
+                let nsjs = NSJSONSerialization.JSONObjectWithData(data!) as! NSDictionary
+                let pl = nsjs
+                
+            guard let retrievedPersons = data! as [[String: AnyObject]] else { return }
+                print(retrievedPersons)
+            for person in retrievedPersons {
+                print(person)
+                self.persons.append(Person(jsonData: person))
+            }
+        }
+            }
+        task.resume()
     }
     
     override func didReceiveMemoryWarning() {
