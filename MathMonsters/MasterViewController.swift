@@ -16,6 +16,13 @@ class MasterViewController: UITableViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            print("Update Person Table")
+            self.personTableView.reloadData()
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

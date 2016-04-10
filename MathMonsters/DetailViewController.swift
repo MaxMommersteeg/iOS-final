@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var aliasTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var showOnMapButton: UIButton!
     
     var completeAliasPreferenceKey: String = ""
     
@@ -51,6 +52,8 @@ class DetailViewController: UIViewController {
             let defaults = NSUserDefaults.standardUserDefaults()
             if let alias = defaults.stringForKey(completeAliasPreferenceKey) {
                 aliasTextField?.text = alias
+            } else {
+                aliasTextField?.text = ""
             }
         }
     }
@@ -77,6 +80,10 @@ class DetailViewController: UIViewController {
         defaults.setObject(alias, forKey: completeAliasPreferenceKey)
         defaults.synchronize()
         print("Saved Alias")
+    }
+    
+    @IBAction func showOnMapButtonPressed() {
+        print("Show On Map pressed")
     }
 }
 
