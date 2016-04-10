@@ -35,7 +35,7 @@ class MasterViewController: UITableViewController {
             let httpResponse = response as! NSHTTPURLResponse
             let statusCode = httpResponse.statusCode
             
-            // Only check
+            // Only check for 200 status
             if (statusCode == 200) {
                 do {
                     let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)

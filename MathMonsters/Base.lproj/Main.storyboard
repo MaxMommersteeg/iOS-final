@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Person-->
         <scene sceneID="2kc-8s-oIa">
             <objects>
-                <viewController id="h6Q-7K-DjN" customClass="DetailViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Person" id="h6Q-7K-DjN" customClass="DetailViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="auu-wc-11u"/>
                         <viewControllerLayoutGuide type="bottom" id="IY0-bF-kzS"/>
@@ -60,26 +60,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-Go-Lad">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-Go-Lad">
                                 <rect key="frame" x="20" y="264" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
+                                <rect key="frame" x="20" y="362" width="128" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Show on map"/>
+                                <connections>
+                                    <action selector="showOnMapButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="afM-CY-0cf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
                                 <rect key="frame" x="20" y="302" width="67" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="roV-d4-Jdm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
-                                <rect key="frame" x="452" y="302" width="128" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Show on map"/>
-                                <connections>
-                                    <action selector="saveButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="o3Q-qJ-f6m"/>
-                                    <action selector="showOnMapButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="afM-CY-0cf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -93,13 +92,31 @@
                         <outlet property="longitudeLabel" destination="CrG-k5-43V" id="MY7-BR-Liq"/>
                         <outlet property="nameLabel" destination="nRW-Jc-WPe" id="xu4-jQ-TFR"/>
                         <outlet property="saveButton" destination="Wg3-LH-qOs" id="p97-Q7-gOm"/>
+                        <segue destination="H51-eP-Ny4" kind="show" identifier="ShowOnMapSegue" id="hoL-Nf-pyw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gj8-st-Twg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1309" y="846"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Map View Controller-->
+        <scene sceneID="cFh-VX-0w9">
+            <objects>
+                <viewController id="H51-eP-Ny4" customClass="MapViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="4Rw-1T-Jl1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
+                    <navigationItem key="navigationItem" id="7cc-dh-kBj"/>
+                    <connections>
+                        <outlet property="mapView" destination="4Rw-1T-Jl1" id="USE-Kx-uRu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orI-HL-1b1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2213" y="833"/>
+        </scene>
+        <!--Person list-->
         <scene sceneID="j6P-X0-CI4">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="jgm-vx-OJ6" customClass="MasterViewController" customModule="iOS_Final" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,7 +148,7 @@
                             <outlet property="delegate" destination="jgm-vx-OJ6" id="8cl-CA-sSA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nRp-8d-MtU"/>
+                    <navigationItem key="navigationItem" title="Person list" id="nRp-8d-MtU"/>
                     <connections>
                         <outlet property="personTableView" destination="BFa-38-msO" id="LhS-gr-P4N"/>
                     </connections>

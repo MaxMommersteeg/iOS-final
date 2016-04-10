@@ -31,6 +31,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var showOnMapButton: UIButton!
     
+    var delegate: PersonSelectionDelegate?
+    
     var completeAliasPreferenceKey: String = ""
     
     var person: Person? {
@@ -78,17 +80,23 @@ class DetailViewController: UIViewController {
         }
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(alias, forKey: completeAliasPreferenceKey)
-        defaults.synchronize()
         print("Saved Alias")
     }
     
     @IBAction func showOnMapButtonPressed() {
         print("Show On Map pressed")
+        performSegueWithIdentifier(Config.showMapSegueIdentifier, sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        let mapVC = segue.destinationViewController as! MapViewController
+        mapVC.selectedPerson = person
     }
 }
 
 extension DetailViewController: PersonSelectionDelegate {
     func personSelected(newPerson: Person) {
+        print("Delegate personSelected Detail")
         person = newPerson
     }
 }

@@ -36,11 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let rightNavController = splitViewController.viewControllers.last as! UINavigationController
     let detailViewController = rightNavController.topViewController as! DetailViewController
 
-    //let firstPerson = masterViewController.persons.first
-    //detailViewController.person = firstPerson
-
     masterViewController.delegate = detailViewController
-
+    
+    
     detailViewController.navigationItem.leftItemsSupplementBackButton = true
     detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
 
@@ -68,7 +66,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-
-
 }
 
