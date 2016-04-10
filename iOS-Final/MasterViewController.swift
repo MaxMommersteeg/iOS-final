@@ -4,7 +4,7 @@ protocol PersonSelectionDelegate: class {
     func personSelected(newPerson: Person)
 }
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, UIAlertViewDelegate {
     var persons = [Person]()
     var delegate: PersonSelectionDelegate?
     
@@ -15,19 +15,30 @@ class MasterViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        // Make sure the PersonTableView always reloadsData on ViewDidAppear (async)
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            print("Update Person Table")
-            self.personTableView.reloadData()
-        })
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
+        if !Connectivity.isConnectedToNetwork() {
+            // Create the alert controller
+            let alertController = UIAlertController(title: "No internet connection", message: "Make sure you have working internet connection", preferredStyle: .Alert)
+            
+            // Create the actions
+            let okAction = UIAlertAction(title: "Retry", style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                self.viewDidAppear(true)
+                return
+            }
+            
+            // Add the actions
+            alertController.addAction(okAction)
+            
+            // Present the controller
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        
+        print("STIL GOT HERE")
         let requestURL: NSURL = NSURL(string: Config.apiBaseUrl)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
+        
         let task = session.dataTaskWithRequest(urlRequest) {
             (data, response, error) -> Void in
             
@@ -40,6 +51,7 @@ class MasterViewController: UITableViewController {
                     // Return a JSON object with data
                     let data = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                     // Iterate over given data
+                    self.persons = []
                     for person in data as! [Dictionary<String, AnyObject>] {
                         // add new person to persons list
                         self.persons.append(Person(jsonData: person))

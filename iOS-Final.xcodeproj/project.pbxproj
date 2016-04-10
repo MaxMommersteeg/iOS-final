@@ -15,6 +15,7 @@
 		2F7941A01CB835AF007605E7 /* persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F79419F1CB835AF007605E7 /* persons.json */; };
 		2F7B202F1CB9ADFD008A6992 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B202E1CB9ADFD008A6992 /* Constants.swift */; };
 		2F8D809B1CB8502800EDCAF1 /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */; };
+		2FA16EF11CBB02B900AA7BF3 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA16EF01CBB02B900AA7BF3 /* Connectivity.swift */; };
 		2FB367761CB9DC070020657C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB367751CB9DC070020657C /* MapViewController.swift */; };
 		2FB367781CB9EDFF0020657C /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB367771CB9EDFF0020657C /* Marker.swift */; };
 		7829B5D51AF8366B00770230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7829B5D41AF8366B00770230 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		2F79419F1CB835AF007605E7 /* persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = persons.json; sourceTree = "<group>"; };
 		2F7B202E1CB9ADFD008A6992 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
+		2FA16EF01CBB02B900AA7BF3 /* Connectivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
 		2FB367751CB9DC070020657C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2FB367771CB9EDFF0020657C /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		7829B5CF1AF8366B00770230 /* iOS-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,9 +88,18 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2FA16EEF1CBB02A400AA7BF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2FA16EF01CBB02B900AA7BF3 /* Connectivity.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		7829B5C61AF8366B00770230 = {
 			isa = PBXGroup;
 			children = (
+				2FA16EEF1CBB02A400AA7BF3 /* Helpers */,
 				2F490E2B1CB9FAD000FC99C7 /* Default-568h@2x.png */,
 				2F7941961CB8349D007605E7 /* Extensions */,
 				2F7941951CB83494007605E7 /* Api */,
@@ -214,6 +225,7 @@
 				2FB367781CB9EDFF0020657C /* Marker.swift in Sources */,
 				7829B5F51AF83B2A00770230 /* MasterViewController.swift in Sources */,
 				2FB367761CB9DC070020657C /* MapViewController.swift in Sources */,
+				2FA16EF11CBB02B900AA7BF3 /* Connectivity.swift in Sources */,
 				2F8D809B1CB8502800EDCAF1 /* GlobalSplitViewController.swift in Sources */,
 				2F79419A1CB834EA007605E7 /* SwiftyJSON.swift in Sources */,
 				2F79419C1CB83532007605E7 /* Person.swift in Sources */,
