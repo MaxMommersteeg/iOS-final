@@ -65,20 +65,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
-                                <rect key="frame" x="20" y="362" width="128" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Show on map"/>
-                                <connections>
-                                    <action selector="showOnMapButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="afM-CY-0cf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
+                            <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
                                 <rect key="frame" x="20" y="302" width="67" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="roV-d4-Jdm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
+                                <rect key="frame" x="20" y="362" width="128" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Show on map"/>
+                                <connections>
+                                    <action selector="showOnMapButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="afM-CY-0cf"/>
                                 </connections>
                             </button>
                         </subviews>

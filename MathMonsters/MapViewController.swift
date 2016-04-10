@@ -13,8 +13,10 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView?
     
-    var selectedPerson: Person?
+    let regionRadius: CLLocationDistance = 500
     
+    var initialLocation: CLLocation?
+    var selectedPerson: Person?
     var person: Person? {
         didSet (newPerson) {
             print(person)
@@ -23,12 +25,20 @@ class MapViewController: UIViewController {
     }
     
     func refreshUI() {
-        
+        if let p = person {
+            initialLocation = CLLocation(latitude: p.currentLocation.latitude, longitude: p.currentLocation.longitude)
+            centerMapOnLocation(initialLocation!)
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Arrived at MapViewController")
         person = selectedPerson
+    }
+    
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2, regionRadius * 2)
+        mapView?.setRegion(coordinateRegion, animated: true)
     }
 }
