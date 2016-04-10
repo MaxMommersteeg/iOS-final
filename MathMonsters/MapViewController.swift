@@ -17,28 +17,31 @@ class MapViewController: UIViewController {
     
     var initialLocation: CLLocation?
     var selectedPerson: Person?
-    var person: Person? {
-        didSet (newPerson) {
-            print(person)
-            self.refreshUI()
-        }
-    }
-    
-    func refreshUI() {
-        if let p = person {
-            initialLocation = CLLocation(latitude: p.currentLocation.latitude, longitude: p.currentLocation.longitude)
-            centerMapOnLocation(initialLocation!)
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Arrived at MapViewController")
-        person = selectedPerson
+        if let p = selectedPerson {
+            initialLocation = CLLocation(latitude: p.currentLocation.latitude, longitude: p.currentLocation.longitude)
+            centerMapOnLocation(initialLocation!)
+            
+            let marker = Marker(
+                title: p.getFullName(),
+                locationName: p.currentLocation.city,
+                discipline: Config.personDiscipline,
+                coordinate: CLLocationCoordinate2D(latitude: p.currentLocation.latitude, longitude: p.currentLocation.longitude))
+            
+            addMarkerToMap(marker)
+        }
     }
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, regionRadius * 2, regionRadius * 2)
         mapView?.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func addMarkerToMap(marker: Marker) {
+        mapView?.addAnnotation(marker)
     }
 }
