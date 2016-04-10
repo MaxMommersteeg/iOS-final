@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F490E2C1CB9FAD000FC99C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F490E2B1CB9FAD000FC99C7 /* Default-568h@2x.png */; };
 		2F7941981CB834C6007605E7 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7941971CB834C6007605E7 /* NSDateExtensions.swift */; };
 		2F79419A1CB834EA007605E7 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7941991CB834EA007605E7 /* SwiftyJSON.swift */; };
 		2F79419C1CB83532007605E7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79419B1CB83532007605E7 /* Person.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F490E2B1CB9FAD000FC99C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2F7941971CB834C6007605E7 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		2F7941991CB834EA007605E7 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		2F79419B1CB83532007605E7 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		7829B5C61AF8366B00770230 = {
 			isa = PBXGroup;
 			children = (
+				2F490E2B1CB9FAD000FC99C7 /* Default-568h@2x.png */,
 				2F7941961CB8349D007605E7 /* Extensions */,
 				2F7941951CB83494007605E7 /* Api */,
 				2F7941941CB8348C007605E7 /* Models */,
@@ -118,8 +121,7 @@
 				7829B5D21AF8366B00770230 /* Supporting Files */,
 				2F8D809A1CB8502800EDCAF1 /* GlobalSplitViewController.swift */,
 			);
-			name = "iOS-Final";
-			path = MathMonsters;
+			path = "iOS-Final";
 			sourceTree = "<group>";
 		};
 		7829B5D21AF8366B00770230 /* Supporting Files */ = {
@@ -192,6 +194,7 @@
 				7829B5DA1AF8366B00770230 /* Main.storyboard in Resources */,
 				7829B5DF1AF8366B00770230 /* LaunchScreen.xib in Resources */,
 				2F7941A01CB835AF007605E7 /* persons.json in Resources */,
+				2F490E2C1CB9FAD000FC99C7 /* Default-568h@2x.png in Resources */,
 				7829B5DC1AF8366B00770230 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MathMonsters/Info.plist;
+				INFOPLIST_FILE = "iOS-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS-Final";
@@ -339,7 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MathMonsters/Info.plist;
+				INFOPLIST_FILE = "iOS-Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "iOS-Final";
