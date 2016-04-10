@@ -24,6 +24,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthdateLabel: UILabel!
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -47,6 +48,7 @@ class DetailViewController: UIViewController {
             print(completeAliasPreferenceKey)
 
             nameLabel?.text = p.getFullName()
+            birthdateLabel?.text = p.birthDate
             latitudeLabel?.text = "\(p.currentLocation.latitude)"
             longitudeLabel?.text = "\(p.currentLocation.longitude)"
             cityLabel?.text = p.currentLocation.city

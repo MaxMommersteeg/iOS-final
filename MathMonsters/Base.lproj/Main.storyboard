@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Person-->
@@ -17,76 +18,140 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Person Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRW-Jc-WPe">
-                                <rect key="frame" x="20" y="72" width="560" height="36"/>
-                                <accessibility key="accessibilityConfiguration" identifier="personName"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-NG-XAd">
-                                <rect key="frame" x="20" y="116" width="560" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Latitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyA-NG-XAd">
+                                <rect key="frame" x="20" y="169" width="231" height="29"/>
                                 <accessibility key="accessibilityConfiguration" identifier="latitudeLabel">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="NO9-Yz-G2Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-k5-43V">
-                                <rect key="frame" x="20" y="153" width="560" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthdate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-fQ-MIA">
+                                <rect key="frame" x="20" y="116" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="birthdateLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="vUR-IV-c8J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Longitude" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-k5-43V">
+                                <rect key="frame" x="20" y="206" width="274" height="29"/>
                                 <accessibility key="accessibilityConfiguration" identifier="longitudeLabel">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w53-Mw-5WJ">
-                                <rect key="frame" x="20" y="190" width="560" height="29"/>
-                                <accessibility key="accessibilityConfiguration" identifier="cityLabel">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-8R-Eh9">
-                                <rect key="frame" x="20" y="235" width="560" height="29"/>
-                                <accessibility key="accessibilityConfiguration" identifier="cityLabel">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="evc-fk-12T"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-Go-Lad">
-                                <rect key="frame" x="20" y="264" width="560" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w53-Mw-5WJ">
+                                <rect key="frame" x="20" y="243" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cityLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="hpy-dE-lJX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLv-8R-Eh9">
+                                <rect key="frame" x="20" y="285" width="560" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cityLabel">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="T8B-zt-Sfg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="center" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8x-Go-Lad">
+                                <rect key="frame" x="20" y="319" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="35y-b0-JXX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="right" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
-                                <rect key="frame" x="20" y="302" width="67" height="40"/>
+                            <button opaque="NO" contentMode="right" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-LH-qOs">
+                                <rect key="frame" x="20" y="357" width="67" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="drg-sS-u9r"/>
+                                    <constraint firstAttribute="height" constant="40" id="hkJ-jx-gur"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="roV-d4-Jdm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
-                                <rect key="frame" x="20" y="362" width="128" height="40"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2V-jh-qky">
+                                <rect key="frame" x="20" y="417" width="128" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="xIB-zj-07G"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Show on map"/>
                                 <connections>
                                     <action selector="showOnMapButtonPressed" destination="h6Q-7K-DjN" eventType="touchDown" id="afM-CY-0cf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Person Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRW-Jc-WPe">
+                                <rect key="frame" x="20" y="72" width="560" height="36"/>
+                                <accessibility key="accessibilityConfiguration" identifier="personName"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14802540733111433" green="0.54125763525305404" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eyA-NG-XAd" firstAttribute="trailing" secondItem="CrG-k5-43V" secondAttribute="trailing" id="3Jk-Pq-efN"/>
+                            <constraint firstItem="Wg3-LH-qOs" firstAttribute="top" secondItem="t8x-Go-Lad" secondAttribute="bottom" constant="8" symbolic="YES" id="4eU-hK-gDN"/>
+                            <constraint firstItem="nRW-Jc-WPe" firstAttribute="trailing" secondItem="H3F-fQ-MIA" secondAttribute="trailing" id="75s-DS-suj"/>
+                            <constraint firstItem="eyA-NG-XAd" firstAttribute="leading" secondItem="CrG-k5-43V" secondAttribute="leading" id="Cp9-oP-Sha"/>
+                            <constraint firstItem="t8x-Go-Lad" firstAttribute="leading" secondItem="Wg3-LH-qOs" secondAttribute="leading" id="EXU-j2-9kv"/>
+                            <constraint firstItem="R2V-jh-qky" firstAttribute="top" secondItem="Wg3-LH-qOs" secondAttribute="bottom" constant="20" id="Ei1-bz-i8o"/>
+                            <constraint firstItem="w53-Mw-5WJ" firstAttribute="leading" secondItem="HLv-8R-Eh9" secondAttribute="leading" id="FYi-9V-L6l"/>
+                            <constraint firstItem="CrG-k5-43V" firstAttribute="top" secondItem="eyA-NG-XAd" secondAttribute="bottom" constant="8" symbolic="YES" id="Fmo-a4-vrP"/>
+                            <constraint firstItem="HLv-8R-Eh9" firstAttribute="leading" secondItem="t8x-Go-Lad" secondAttribute="leading" id="HM6-cd-Yne"/>
+                            <constraint firstItem="t8x-Go-Lad" firstAttribute="top" secondItem="HLv-8R-Eh9" secondAttribute="bottom" constant="5" id="HVs-9C-Exn"/>
+                            <constraint firstItem="H3F-fQ-MIA" firstAttribute="leading" secondItem="eyA-NG-XAd" secondAttribute="leading" id="Kad-Xd-FkV"/>
+                            <constraint firstItem="Wg3-LH-qOs" firstAttribute="leading" secondItem="R2V-jh-qky" secondAttribute="leading" id="R6o-Ro-v8y"/>
+                            <constraint firstItem="nRW-Jc-WPe" firstAttribute="top" secondItem="auu-wc-11u" secondAttribute="bottom" constant="8" symbolic="YES" id="RZT-LK-79N"/>
+                            <constraint firstItem="w53-Mw-5WJ" firstAttribute="trailing" secondItem="HLv-8R-Eh9" secondAttribute="trailing" id="TOa-Ps-WxQ"/>
+                            <constraint firstItem="CrG-k5-43V" firstAttribute="leading" secondItem="w53-Mw-5WJ" secondAttribute="leading" id="VrU-JN-CHc"/>
+                            <constraint firstItem="CrG-k5-43V" firstAttribute="trailing" secondItem="w53-Mw-5WJ" secondAttribute="trailing" id="WZp-T1-HnQ"/>
+                            <constraint firstItem="nRW-Jc-WPe" firstAttribute="leading" secondItem="Exu-Cn-oId" secondAttribute="leadingMargin" id="bqX-It-fcm"/>
+                            <constraint firstItem="HLv-8R-Eh9" firstAttribute="top" secondItem="w53-Mw-5WJ" secondAttribute="bottom" constant="13" id="c9V-fB-hOU"/>
+                            <constraint firstItem="HLv-8R-Eh9" firstAttribute="trailing" secondItem="t8x-Go-Lad" secondAttribute="trailing" id="dST-GY-Byo"/>
+                            <constraint firstItem="H3F-fQ-MIA" firstAttribute="top" secondItem="nRW-Jc-WPe" secondAttribute="bottom" constant="8" symbolic="YES" id="dnO-oN-Euz"/>
+                            <constraint firstItem="IY0-bF-kzS" firstAttribute="top" secondItem="R2V-jh-qky" secondAttribute="bottom" constant="143" id="hM8-12-qao"/>
+                            <constraint firstItem="nRW-Jc-WPe" firstAttribute="trailing" secondItem="Exu-Cn-oId" secondAttribute="trailingMargin" id="iVE-eW-vKy"/>
+                            <constraint firstItem="w53-Mw-5WJ" firstAttribute="top" secondItem="CrG-k5-43V" secondAttribute="bottom" constant="8" symbolic="YES" id="kxJ-Q9-4Xq"/>
+                            <constraint firstItem="HLv-8R-Eh9" firstAttribute="centerY" secondItem="Exu-Cn-oId" secondAttribute="centerY" id="oCQ-VQ-a7K"/>
+                            <constraint firstItem="H3F-fQ-MIA" firstAttribute="trailing" secondItem="eyA-NG-XAd" secondAttribute="trailing" id="pSB-IJ-TIW"/>
+                            <constraint firstItem="nRW-Jc-WPe" firstAttribute="leading" secondItem="H3F-fQ-MIA" secondAttribute="leading" id="ujT-gJ-kXd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iQ8-BX-V99"/>
                     <connections>
                         <outlet property="aliasTextField" destination="t8x-Go-Lad" id="ASp-iW-pHr"/>
+                        <outlet property="birthdateLabel" destination="H3F-fQ-MIA" id="KWR-Fw-I2r"/>
                         <outlet property="cityLabel" destination="w53-Mw-5WJ" id="QlX-AS-FDC"/>
                         <outlet property="latitudeLabel" destination="eyA-NG-XAd" id="Q4u-1t-jxS"/>
                         <outlet property="longitudeLabel" destination="CrG-k5-43V" id="MY7-BR-Liq"/>

@@ -12,4 +12,5 @@ struct Config {
     static let aliasPreferenceKey = "ALIAS_PREFERENCE_KEY"
     static let showMapSegueIdentifier = "ShowOnMapSegue"
     static let personDiscipline = "Person"
+    static let apiBaseUrl = "http://www.maxmommersteeg.nl/users.json"
 }
