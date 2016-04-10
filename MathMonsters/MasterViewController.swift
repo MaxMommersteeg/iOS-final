@@ -69,7 +69,14 @@ class MasterViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         let person = self.persons[indexPath.row]
-        cell.textLabel?.text = person.getFullName()
+        
+        var cellText = person.getFullName()
+        let defaults = NSUserDefaults.standardUserDefaults()
+        // Apped alias if we have one
+        if let alias = defaults.stringForKey("\(Config.aliasPreferenceKey)\(person.personId)") {
+            cellText = "\(cellText) | \(alias)"
+        }
+        cell.textLabel?.text = cellText
         
         return cell
     }
