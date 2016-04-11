@@ -34,7 +34,11 @@ class MasterViewController: UITableViewController, UIAlertViewDelegate {
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         
-        print("STIL GOT HERE")
+        loadList()
+    }
+    
+    func loadList() {
+        print("Loading list")
         let requestURL: NSURL = NSURL(string: Config.apiBaseUrl)!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
